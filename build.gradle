@@ -52,10 +52,16 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-    // querydsl
-    implementation("io.github.openfeign.querydsl:querydsl-jpa:${queryDslVersion}")
-    annotationProcessor("io.github.openfeign.querydsl:querydsl-apt:${queryDslVersion}:jakarta")
-    testAnnotationProcessor("io.github.openfeign.querydsl:querydsl-apt:${queryDslVersion}:jakarta")
+//    // querydsl -> 오류로 인한 주석 처리
+//    implementation("io.github.openfeign.querydsl:querydsl-jpa:${queryDslVersion}")
+//    annotationProcessor("io.github.openfeign.querydsl:querydsl-apt:${queryDslVersion}:jakarta")
+//    testAnnotationProcessor("io.github.openfeign.querydsl:querydsl-apt:${queryDslVersion}:jakarta")
+
+    // 추가: 유효성 검사
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // 추가: Swagger UI (API 문서화 요구사항 대응)
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.5'
 }
 
 tasks.named('test') {
