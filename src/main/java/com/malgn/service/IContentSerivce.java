@@ -8,9 +8,9 @@ import org.springframework.data.domain.Pageable;
 
 public interface IContentSerivce {
 
-    public int createContent(ContentRequestDTO pDTO);
-    public Page<ContentListResponseDTO> getContentList(Pageable pageable);
-    public ContentResponseDTO getContentDetail(Long id);
-    public int updateContent(Long id, ContentRequestDTO pDTO);
-    public int deleteContent(Long id);
+    int createContent(ContentRequestDTO pDTO);
+    Page<ContentListResponseDTO> getContentList(Pageable pageable);
+    ContentResponseDTO getContentDetail(Long id);
+    int updateContent(Long id, ContentRequestDTO pDTO);
+    int deleteContent(Long id);
 }
